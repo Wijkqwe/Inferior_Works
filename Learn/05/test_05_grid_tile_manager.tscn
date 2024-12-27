@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chhe4qfstpub6"]
+
+[ext_resource type="Script" path="res://05/test_05_grid_tile_manager.gd" id="1_tnbim"]
+
+[node name="test_05_grid_tile_manager" type="Node"]
+script = ExtResource("1_tnbim")

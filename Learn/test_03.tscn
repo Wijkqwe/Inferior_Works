@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://be4b2xod0m6l3"]
+
+[ext_resource type="PackedScene" uid="uid://c0kbras6117vw" path="res://test_01.tscn" id="1_fmc0q"]
+[ext_resource type="Script" path="res://test_03.gd" id="1_jcbch"]
+[ext_resource type="PackedScene" uid="uid://bqrhr6v8ymy7i" path="res://test_02.tscn" id="2_ghuqn"]
+[ext_resource type="PackedScene" uid="uid://d4citstuer38x" path="res://test_04.tscn" id="3_7sau1"]
+[ext_resource type="Texture2D" uid="uid://dfxnkkexsqs7x" path="res://icon.svg" id="5_lnaph"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hae8v"]
+scenes/1/scene = ExtResource("1_fmc0q")
+scenes/2/scene = ExtResource("2_ghuqn")
+scenes/3/scene = ExtResource("3_7sau1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgagy"]
+texture = ExtResource("5_lnaph")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g0wel"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetScenesCollectionSource_hae8v")
+sources/1 = SubResource("TileSetAtlasSource_dgagy")
+
+[node name="test_03" type="Node2D"]
+script = ExtResource("1_jcbch")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_g0wel")
+format = 2

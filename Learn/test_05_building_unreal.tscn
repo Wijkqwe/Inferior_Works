@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkaatrf1xhoj5"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_c2rmd"]
+size = Vector2(32, 32)
+
+[node name="test_05_building_unreal" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.501961)
+self_modulate = Color(1, 1, 1, 0.501961)
+texture = SubResource("PlaceholderTexture2D_c2rmd")
+centered = false

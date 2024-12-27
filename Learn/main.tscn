@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddoswi1xyluig"]
+
+[ext_resource type="Texture2D" uid="uid://dfxnkkexsqs7x" path="res://icon.svg" id="1_seji5"]
+
+[sub_resource type="SkeletonModification2D" id="SkeletonModification2D_uqsps"]
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_kjmrl"]
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2D_uqsps")
+
+[node name="main" type="Node2D"]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+modification_stack = SubResource("SkeletonModificationStack2D_kjmrl")
+
+[node name="IconBone2D" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(136, 152)
+
+[node name="Icon" type="Sprite2D" parent="Skeleton2D/IconBone2D"]
+position = Vector2(168, 32)
+texture = ExtResource("1_seji5")
+
+[node name="Icon2" type="Sprite2D" parent="Skeleton2D/IconBone2D/Icon"]
+position = Vector2(0, 144)
+texture = ExtResource("1_seji5")
+
+[node name="Icon3" type="Sprite2D" parent="Skeleton2D/IconBone2D/Icon/Icon2"]
+position = Vector2(0, 144)
+texture = ExtResource("1_seji5")
