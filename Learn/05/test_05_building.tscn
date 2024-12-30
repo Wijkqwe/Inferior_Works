@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://djcnbqny68ilp"]
+[gd_scene load_steps=3 format=3 uid="uid://djcnbqny68ilp"]
+
+[ext_resource type="PackedScene" uid="uid://whot0q7q6alo" path="res://05/Scenes/component/test_05_building_component.tscn" id="1_8bkqd"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nq51t"]
 size = Vector2(32, 32)
@@ -7,3 +9,5 @@ size = Vector2(32, 32)
 modulate = Color(0, 1, 1, 1)
 texture = SubResource("PlaceholderTexture2D_nq51t")
 centered = false
+
+[node name="test_05_building_component" parent="." instance=ExtResource("1_8bkqd")]
