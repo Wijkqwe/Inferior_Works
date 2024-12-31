@@ -14,12 +14,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if cursor.visible:
 		cursor.position = Vector2i(get_global_mouse_position() / 32) * 32
-		test_05_grid_tile_manager.highlight_buildable_tile()
+		test_05_grid_tile_manager.highlight_expended_buildable_tile(get_global_mouse_position() / 32, 3)
 		
-		print(test_05_grid_tile_manager.is_tile_on_valid(cursor.position / 32))
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("mouse_left") and test_05_grid_tile_manager.is_tile_on_valid(cursor.position / 32) and cursor.visible:
+	if event.is_action_pressed("mouse_left") and test_05_grid_tile_manager.is_tile_position_buildable(cursor.position / 32) and cursor.visible:
 		cursor.visible = false
 		_place_building()
 
@@ -29,13 +28,12 @@ func _place_building() -> void:
 	_building_in.global_position = cursor.position
 	add_child(_building_in)
 	
-	test_05_grid_tile_manager.mark_tile_as_occupied(_building_in.global_position)
 	test_05_grid_tile_manager.clear_highlight()
-
 
 
 func _on_button_pressed() -> void:
 	cursor.visible = !cursor.visible
+	test_05_grid_tile_manager.clear_highlight()
 	'''
 	if get_node_or_null("test_05_tile"):
 		$test_05_tile.queue_free()

@@ -11,3 +11,4 @@ texture = SubResource("PlaceholderTexture2D_nq51t")
 centered = false
 
 [node name="test_05_building_component" parent="." instance=ExtResource("1_8bkqd")]
+_buildable_radius = 2
