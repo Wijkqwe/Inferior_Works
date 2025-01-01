@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameEvent="*res://05/Scenes/autoload/gameevent.gd"
+Cursor="*res://05/Scenes/autoload/cursor.tscn"
 
 [display]
 

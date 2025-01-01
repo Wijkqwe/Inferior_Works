@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkgdexiqtfrl0"]
+
+[ext_resource type="Script" path="res://05/Scenes/autoload/cursor.gd" id="1_dp3wv"]
+[ext_resource type="Texture2D" uid="uid://dfxnkkexsqs7x" path="res://05/Assets/icon.svg" id="1_frkdj"]
+
+[node name="cursor" type="CanvasLayer"]
+script = ExtResource("1_dp3wv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_frkdj")
+centered = false

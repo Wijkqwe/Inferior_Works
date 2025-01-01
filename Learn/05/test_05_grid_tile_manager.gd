@@ -28,9 +28,13 @@ func highlight_expended_buildable_tile(_root_cell : Vector2i, _radius : int) -> 
 	for i in _valid_buildable_tiles.keys():
 		if _valid_dic.has(i):
 			_valid_dic.erase(i)
+	var comps = get_tree().get_nodes_in_group("buildingcompent")
+	for i in comps:
+		if _valid_dic.has(i.get_cell_position()):
+			_valid_dic.erase(i.get_cell_position())
+	
 	for i in _valid_dic.keys():
 		_base_tile_map.set_cell(1, i, 1, Vector2i(1, 2), 0)
-	pass
 
 
 func is_tile_on_valid(_tile_position : Vector2i) -> bool:
